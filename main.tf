@@ -5,6 +5,6 @@ locals {
 resource "null_resource" "makefolder" {
 
   provisioner "local-exec" {
-    command = "/usr/bin/mkdir /tmp/${local.foldername} && touch ./${local.foldername}.txt && echo 'ciao' >> ./${local.foldername}.txt"
+    command = "rm -rf /tmp/${local.foldername} && /usr/bin/mkdir /tmp/${local.foldername} && touch ./${local.foldername}.txt && echo 'ciao' >> ./${local.foldername}.txt"
   }
 }
