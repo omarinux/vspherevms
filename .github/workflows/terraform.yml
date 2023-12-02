@@ -122,4 +122,4 @@ jobs:
 
     - name: run playbook
       run: |
-        ansible-playbook -i inventory playbook.yaml
+        ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i inventory playbook.yaml
