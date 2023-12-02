@@ -92,10 +92,10 @@ jobs:
       #if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
       run: terraform apply -auto-approve #-input=false
 
-    - name: Set up Python 3.12
+    - name: Set up Python 3.9.18
       uses: actions/setup-python@v2
       with:
-        python-version: 3.12
+        python-version: 3.9.18
           
     - name: Install dependencies Including Ansible
       run: |
