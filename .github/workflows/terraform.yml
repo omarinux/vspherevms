@@ -92,6 +92,21 @@ jobs:
       #if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
       run: terraform apply -auto-approve #-input=false
 
+  ansible:
+    name: 'ansible'
+    runs-on: mosc01
+    #environment: production
+
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+    # Checkout the repository to the GitHub Actions runner
+    - name: Checkout
+      uses: actions/checkout@v3
+
     - name: Set up Python 3.9.18
       uses: actions/setup-python@v2
       with:
