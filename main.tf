@@ -5,6 +5,6 @@ locals {
 resource "null_resource" "makefolder" {
 
   provisioner "local-exec" {
-    command = mkdir /tmp/${local.foldername}
+    command = "/usr/bin/mkdir /tmp/${local.foldername}"
   }
 }
