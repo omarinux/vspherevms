@@ -1,5 +1,5 @@
 locals {
-  foldername = test01
+  foldername = "test01"
 }
 
 resource "null_resource" "makefolder" {
