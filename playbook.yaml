@@ -2,7 +2,7 @@
 
 - hosts: all
   tasks:
-  - name: Creating an empty file
+  - name: Creating an empty file after ssh exchange
     file:
       path: "/tmp/ansiblefile.txt"
       state: touch
