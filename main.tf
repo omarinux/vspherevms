@@ -1,6 +1,6 @@
 locals {
-  foldername = "test02222"
-  foldername33 = "333333"
+  foldername = "444444"
+  foldername33 = "99999"
 }
 
 resource "null_resource" "makefolder" {
