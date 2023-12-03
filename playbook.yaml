@@ -2,7 +2,7 @@
 
 - hosts: all
   tasks:
-  - name: Creating an empty file sample
+  - name: Creating an empty file sample2
     file:
       path: "/tmp/ansiblefile.txt"
       state: touch
