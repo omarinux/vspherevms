@@ -92,6 +92,17 @@ jobs:
       #if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
       run: terraform apply -auto-approve #-input=false
 
+    - name: Commit changes
+      run: |
+        git config --global user.email "omarinux@gmail.com"
+        git config --global user.name "GitHub Actions"
+        git add terraform.tfstate
+        git commit -m "Update Terraform tfstete"
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   ansible:
     name: 'ansible'
     runs-on: mosc01
