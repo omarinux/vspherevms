@@ -64,6 +64,7 @@ jobs:
 
   ansible:
     name: 'ansible'
+    needs: terraform
     runs-on: mosc01
     #environment: production
 
