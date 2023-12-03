@@ -97,7 +97,7 @@ jobs:
       run: |
         git config --global user.email "omarinux@gmail.com"
         git config --global user.name "GitHub Actions"
-        git add terraform.tfstate
+        git add .
         git commit -m "Update Terraform tfstete"
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git push
