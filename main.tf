@@ -1,6 +1,6 @@
 locals {
   filename = "444444"
-  content = "7777"
+  content = "gaaggagagaga"
 }
 
 resource "local_file" "ciao" {
